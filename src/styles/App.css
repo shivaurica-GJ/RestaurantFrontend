@@ -1,0 +1,165 @@
+:root {
+  --primary-red: #8B0000;
+  --primary-ivory: #FFFFF0;
+  --primary-dark: #1a1a1a;
+  --primary-light: #ffffff;
+  --transition-speed: 0.3s;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Global image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Hero section image optimization */
+.hero-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* Menu item images */
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Gallery images */
+.gallery-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive image sizes */
+@media (max-width: 768px) {
+  .hero-image {
+    max-height: 400px;
+  }
+
+  .menu-item img {
+    height: 180px;
+  }
+
+  .gallery-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image {
+    max-height: 300px;
+  }
+
+  .menu-item img {
+    height: 160px;
+  }
+
+  .gallery-image {
+    height: 180px;
+  }
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 160px;
+  right: 25px;
+  z-index: 1000;
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary-red);
+  color: var(--primary-ivory);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 4px 12px rgba(139, 0, 0, 0.2);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-to-top:hover,
+.scroll-to-top:focus {
+  background-color: #660000;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(139, 0, 0, 0.3);
+  color: var(--primary-ivory);
+  outline: none;
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+.scroll-to-top svg {
+  width: 22px;
+  height: 22px;
+  transition: transform var(--transition-speed) ease;
+  fill: currentColor;
+}
+
+.scroll-to-top:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 140px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .scroll-to-top svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .scroll-to-top {
+    bottom: 130px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .scroll-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Rest of your existing CSS */ 

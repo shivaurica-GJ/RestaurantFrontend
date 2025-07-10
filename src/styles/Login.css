@@ -1,0 +1,112 @@
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff5f0; /* light ivory-orange background */
+  padding: 20px;
+ 
+}
+
+/* Login Card Styling */
+.login-card {
+  width: 360px; /* Adjust to your preference */
+  padding: 30px 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Login title */
+.login-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #7b1919; /* maroon */
+}
+
+/* Force label text to left */
+.login-card .form-label {
+  text-align: left !important;
+  display: block;
+  color: #7b1919; /* maroon */
+  font-weight: 600;
+}
+
+/* Custom login button */
+.login-button {
+  background-color: #b22222; /* firebrick red */
+  border: none;
+}
+
+.login-button:hover {
+  background-color: #8b0000; /* dark red */
+}
+
+/* Register link */
+.register-link {
+  color: #b22222;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.register-link:hover {
+  color: #8b0000;
+}
+
+
+/* Show password button */
+.show-password-btn {
+  position: absolute;
+  top: 38px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #D35400;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.show-password-btn:hover {
+  color: #8B0000;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+}
+.social-login-text {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.social-link {
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.social-link.google {
+  color: #db4437;
+}
+
+.social-link.facebook {
+  color: #3b5998;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
